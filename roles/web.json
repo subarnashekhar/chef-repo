@@ -1,0 +1,19 @@
+{
+    "name" : "webserver",
+    "description" : "",
+    "json_class" : "Chef::Role",
+    "default_attributes" : {
+
+    },
+    "override_attributes" : {
+        "users" : {
+            "list" : [ "Smith" , "Allen"]
+        }
+    },
+    "chef-type" : "role",
+    "run_list" : [
+        "recipe[create_user]",
+        "recipe[apache]"    
+    ],
+    "env_run_lists" : {}
+}
